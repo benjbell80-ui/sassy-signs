@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
 
   if (resend) {
     await resend.emails.send({
-      from: "Sassy Signs & Designs <orders@sassysignsanddesigns.com>",
+      from: "Sassy Signs & Designs <onboarding@resend.dev>",
       to: CONTACT_EMAIL,
       replyTo: email,
       subject: `✨ New Order: ${occasion} sign for ${name}`,
@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
 
     // Send confirmation to customer
     await resend.emails.send({
-      from: "Sam at Sassy Signs <orders@sassysignsanddesigns.com>",
+      from: "Sam at Sassy Signs <onboarding@resend.dev>",
       to: email,
       subject: "Got your order request! 🎉",
       html: `
