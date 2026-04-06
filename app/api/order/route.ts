@@ -14,10 +14,8 @@ export async function POST(req: NextRequest) {
   }
 
   const sizeLabels: Record<string, string> = {
-    small: 'Small (up to 18")',
-    medium: 'Medium (18"–36")',
-    large: 'Large (36"–48")',
-    xlarge: 'Extra Large (48"+)',
+    "3x4": "3×4 ft ($50)",
+    "3x5": "3×5 ft ($60)",
     unsure: "Not sure",
   };
 

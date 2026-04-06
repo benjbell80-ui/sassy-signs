@@ -7,10 +7,8 @@ const OCCASIONS = [
 ];
 
 const SIZES = [
-  { value: "small", label: 'Small — up to 18"' },
-  { value: "medium", label: 'Medium — 18"–36"' },
-  { value: "large", label: 'Large — 36"–48"' },
-  { value: "xlarge", label: 'Extra Large — 48"+' },
+  { value: "3x4", label: '3×4 — $50' },
+  { value: "3x5", label: '3×5 — $60' },
   { value: "unsure", label: "Not sure — let Sam decide!" },
 ];
 
@@ -71,6 +69,23 @@ export default function OrderPage() {
           <p className="text-[#9a6b4b] text-lg">
             Fill out the form below and Sam will reach out within 1–2 days to confirm your order and pricing.
           </p>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-8 bg-white border-b border-[#f7d9d0]">
+        <div className="max-w-2xl mx-auto px-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {[
+              { size: "3×4", price: "$50" },
+              { size: "3×5", price: "$60" },
+            ].map((item) => (
+              <div key={item.size} className="flex-1 bg-[#fdf8f3] border-2 border-[#f7d9d0] rounded-2xl p-6 text-center">
+                <p className="text-sm font-bold uppercase tracking-widest text-[#b07c56] mb-1">{item.size} ft</p>
+                <p className="font-display text-4xl text-[#f4845f]">{item.price}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
